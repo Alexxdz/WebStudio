@@ -3,6 +3,18 @@
 
 h1 {color : #FFFFFF;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+.container {
+    width: 840px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 button {color: #ffffff;background: #188CE8;
@@ -43,9 +55,6 @@ header a {font-family: 'Roboto', sans-serif;
   font-weight: 500;
  }
 
-h1 {font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-}
 
  #studio h3 {font-family: 'Roboto', sans-serif;
    font-weight: 700;
