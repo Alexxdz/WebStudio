@@ -72,7 +72,9 @@ p {
     align-items: baseline;
 }
 
-.header_navigation_contacts-item:hover {
+.header_navigation_contacts-item:hover,
+.header_navigation-item:hover,
+.header_link-contact:hover {
     color: #2196F3;
     fill: #2196F3;
 }
@@ -309,15 +311,85 @@ header a:hover {
     letter-spacing: 0.48px;
 }
 
-.twt:hover {
-    background-image: url("../images/svg/Ellipse.svg");
-    background-position: 10px 0px;
+.inst_box {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.inst_box:hover,
+.inst:hover {
+    background-image: url(../images/svg/Ellipse.svg);
     fill: var(--color-two);
+}
+
+.inst {
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.twt_box {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.twt_box:hover,
+.twt:hover {
+    background-image: url(../images/svg/Ellipse.svg);
+    fill: var(--color-two);
+}
+
+.twt {
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.fb_box {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.fb_box:hover,
+.fb:hover {
+    background-image: url(../images/svg/Ellipse.svg);
+    fill: var(--color-two);
+}
+
+.fb {
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.in_box {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.in_box:hover,
+.in:hover {
+    background-image: url(../images/svg/Ellipse.svg);
+    fill: var(--color-two);
+}
+
+.in {
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
 .portfolio_svg-links {
     display: flex;
-    gap: 25px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
@@ -365,6 +437,10 @@ header a:hover {
     fill: #2196F3;
 }
 
+.customers-svg-item:hover {
+    fill: #2196F3;
+}
+
 .customers-svg-item {
     padding: 16px 32px;
 }
@@ -375,16 +451,110 @@ header a:hover {
     padding-bottom: 60px;
 }
 
-.contacts_box {
+.contacts_box-left {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+.contacts_box {
+    display: flex;
+    gap: 70px;
+}
+
+
+
 .contacts_box_list {
     display: flex;
     flex-direction: column;
     gap: 9px;
+}
+
+.inst_box-two {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    background-image: url("../images/svg/ellipse2.svg");
+}
+
+.inst-two {
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.inst_box-two:hover {
+    background-image: url("../images/svg/Ellipse.svg");
+}
+
+.twt_box-two {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    background-image: url("../images/svg/ellipse2.svg");
+}
+
+.twt_box-two:hover {
+    background-image: url("../images/svg/Ellipse.svg");
+}
+
+.twt-two {
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.fb_box-two {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    background-image: url("../images/svg/ellipse2.svg");
+}
+
+.fb_box-two:hover {
+    background-image: url("../images/svg/Ellipse.svg");
+}
+
+.fb-two {
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.in_box-two {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    background-image: url("../images/svg/ellipse2.svg");
+}
+
+.in_box-two:hover {
+    background-image: url("../images/svg/Ellipse.svg");
+}
+
+.in-two {
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.contacts_box-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts_links {
+    display: flex;
+    gap: 10px;
 }
 
 address {
@@ -406,6 +576,17 @@ address {
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.42px;
+}
+
+.contacts_box-links-title {
+    color: var(--color-two);
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
 }
 
 
