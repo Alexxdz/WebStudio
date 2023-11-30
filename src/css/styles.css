@@ -243,6 +243,62 @@ header a:hover {
 }
 
 
+.about_img-box-one {
+    background: rgba(47, 48, 58, 0.80);
+    width: 370px;
+    height: 70px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 1582px;
+    left: 75px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_img-box-two {
+    background: rgba(47, 48, 58, 0.80);
+    width: 370px;
+    height: 70px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 1582px;
+    left: 475px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_img-box-three {
+    background: rgba(47, 48, 58, 0.80);
+    width: 370px;
+    height: 70px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 1582px;
+    left: 875px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about_text {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+
+
 .portfolio {
     background: #F5F4FA;
     padding-top: 94px;
