@@ -79,6 +79,27 @@ p {
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.28px;
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.header_link::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+}
+
+.header_link:hover:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    height: 2px;
+    background-color: var(--color-three);
+    transition: all 200ms linear;
 }
 
 .header_navigation_contacts-item:hover,
@@ -139,6 +160,7 @@ header {
     line-height: 26px;
     letter-spacing: 0.48px;
     padding: 6px 20px;
+    transition: all 250ms ease-out;
 }
 
 .portfolio_box-button:hover {
@@ -146,6 +168,8 @@ header {
     background: var(--color-three);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
     color: var(--color-two);
+    transform: scale(0.9);
+    cursor: pointer;
 }
 
 .portfolio_box-cards-box {
@@ -199,12 +223,48 @@ header {
     gap: 30px;
     flex-direction: column;
     justify-content: space-between;
-} 
+}
 
 
 .portfolio_box-cards-item {
     display: flex;
     gap: 30px;
+}
+
+.img-overflow {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    flex-shrink: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.overflow-text {
+    background: rgba(33, 150, 243, 0.90);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translatey(100%);
+    transition: transform 500ms;
+}
+
+.portfolio_box-cards-box:hover .overflow-text {
+    transform: translatey(0);
+}
+
+.text {
+    color: #FFF;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.54px;
+    width: 322px;
+    padding: 63px 24px;
 }
 
 .footer {
@@ -351,7 +411,77 @@ address {
     text-transform: uppercase;
 }
 
+.contacts a{
+    transition: all 250ms linear;
+}
 
 .contacts a:hover {
     color: #2196F3;
+}
+
+.contacts_box-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts_box-form-title {
+    color: var(--color-two);
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+}
+
+.contacts_box-form-input {
+    width: 358px;
+    height: 47px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: rgba(33, 150, 243, 0.00);
+}
+
+.contacts_box-form-input:focus {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    outline: 1px solid var(--color-three);
+}
+
+.contacts_box-form-input::placeholder {
+    color: rgba(255, 255, 255, 0.60);
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.48px;
+    padding-left: 10px;
+}
+
+.contacts_box-form-btn {
+    border-radius: 4px;
+    background: var(--color-three);
+    color: var(--color-two);
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.96px;
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+    border: none;
+    background-image: url("../images/svg/icon-send.svg");
+    background-repeat: no-repeat;
+    background-position: 160px 10px;
+    transition: all 300ms linear;
+
+}
+
+.contacts_box-form-btn:hover {
+    box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
 }

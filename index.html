@@ -67,7 +67,47 @@
                     <h1 class="webstudio_title">Ефективні рішення для вашого бізнесу</h1>
                     <div class="webstudio_div-button">
                         <div class="webstudio_div-button-tb">
-                            <button type="button" class="webstudio_button">Замовити послугу</button>
+                            <button type="button" class="webstudio_button" data-modal-open>Замовити послугу</button>
+                            <div class="backdrop is-hidden" data-modal>
+                                <div class="modal">
+                                    <form class="webstudio_form">
+                                        <div class="modal-title-box">
+                                            <button class="close-btn" data-modal-close></button>
+                                            <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+                                        </div>
+                                        <div class="webstudio_form-box">
+                                            <div class="webstudio_form-box-items">
+                                                <label class="form-item">
+                                                    <p class="form-text">Ім'я</p>
+                                                    <input class="form-input-one" type="text" name="name" id="name"
+                                                        >
+                                                </label>
+                                                <label class="form-item">
+                                                    <p class="form-text">Телефон</p>
+                                                    <input class="form-input-two" type="tel" name="tel" id="tel">
+                                                </label>
+                                                <label class="form-item">
+                                                    <p class="form-text">Пошта</p>
+                                                    <input class="form-input-three" type="email" name="email" id="email"
+                                                       >
+                                                </label>
+                                                <label class="form-item">
+                                                    <p class="form-text">Коментар</p>
+                                                    <textarea class="form-input-texarea" name="commit" id="commit"
+                                                        placeholder="Введіть текст"></textarea>
+                                                </label>
+                                            </div>
+                                            <label class="form-item-link">
+                                                <input class="form-input-checkbox" type="checkbox" name="checkbox"
+                                                    id="checkbox" >
+                                                <p class="form-text-link">Погоджуюся з розсилкою та приймаю <a
+                                                        class="form-link" href="#">Умови договору</a></p>
+                                            </label>
+                                        </div>
+                                        <button class="webstudio_form-btn" type="submit">Відправити</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,19 +239,24 @@
                 <div class="about_box">
                     <h2 class="about_title">Чим ми займаємося</h2>
                     <div class="about_box_img">
-                        <img class="about_img" src="./src/images/img/img1.jpg" alt="img1">
-                        <div class="about_img-box-one">
-                            <p class="about_text">Десктопні додатки</p>
+                        <div class="img-overflow">
+                            <img class="about_img" src="./src/images/img/img1.jpg" alt="img1">
+                            <div class="about_img-box-one">
+                                <p class="about_text">Десктопні додатки</p>
+                            </div>
                         </div>
-                        <img class="about_img" src="./src/images/img/img2.jpg" alt="img2">
-                        <div class="about_img-box-two">
-                            <p class="about_text">Мобільні додатки</p>
+                        <div class="img-overflow">
+                            <img class="about_img" src="./src/images/img/img2.jpg" alt="img2">
+                            <div class="about_img-box-two">
+                                <p class="about_text">Мобільні додатки</p>
+                            </div>
                         </div>
-                        <img class="about_img" src="./src/images/img/img3.jpg" alt="img3">
-                        <div class="about_img-box-three">
-                            <p class="about_text" >Дизайнерські рішення</p>
+                        <div class="img-overflow">
+                            <img class="about_img" src="./src/images/img/img3.jpg" alt="img3">
+                            <div class="about_img-box-three">
+                                <p class="about_text">Дизайнерські рішення</p>
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -860,8 +905,8 @@
                             </div>
                             <div class="in_box-two">
                                 <a href="https://www.linkedin.com/">
-                                    <svg class="in-two" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                        fill="#FFFFFF">
+                                    <svg class="in-two" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 20 20" fill="#FFFFFF">
                                         <g clip-path="url(#clip0_11_2996)">
                                             <path
                                                 d="M19.995 20.0001V19.9993H20V12.6643C20 9.07593 19.2275 6.31177 15.0325 6.31177C13.0158 6.31177 11.6625 7.41843 11.11 8.4676H11.0517V6.64677H7.07416V19.9993H11.2158V13.3876C11.2158 11.6468 11.5458 9.96343 13.7017 9.96343C15.8258 9.96343 15.8575 11.9501 15.8575 13.4993V20.0001H19.995Z"
@@ -881,10 +926,23 @@
                             </div>
                         </div>
                     </div>
+                    <div class="contacts_box-form">
+                        <p class="contacts_box-form-title">Підпишіться на розсилку</p>
+                        <form action="">
+                            <label for="">
+                                <input class="contacts_box-form-input" type="email" name="email" id="email"
+                                    placeholder="E-mail">
+                            </label>
+                            <label for="">
+                                <button class="contacts_box-form-btn" type="submit">Підписатися</button>
+                            </label>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </footer>
+    <script src="./src/main.js"></script>
 </body>
 
 </html>
