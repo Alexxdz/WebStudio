@@ -72,12 +72,6 @@ p {
     align-items: baseline;
 }
 
-.header_navigation_contacts-item:hover,
-.header_navigation-item:hover,
-.header_link-contact:hover {
-    color: #2196F3;
-    fill: #2196F3;
-}
 
 .header_navigation_list {
     display: flex;
@@ -98,13 +92,40 @@ p {
 
 .header_link::after {
     content: "";
+    display: block;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -20px;
     width: 0;
+    height: 2px;
+    background-color: var(--color-three);
+    transition: width 0.5s linear;
 }
 
 .header_link:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    height: 2px;
+    background-color: var(--color-three);
+
+}
+
+.header_main-link {
+    color: var(--color-three);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    position: relative;
+}
+
+.header_main-link::after {
     content: "";
     width: 100%;
     position: absolute;
@@ -113,17 +134,30 @@ p {
     height: 2px;
     background-color: var(--color-three);
     transition: all 200ms linear;
+
 }
 
-
 .header_link-contact {
-    color: #757575;
+    color: var(--color-four);
     font-family: 'Roboto';
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.28px;
+    fill: var(--color-four);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: all 150ms linear;
+}
+
+.header_link-contact:hover {
+    color: var(--color-three);
+    fill: var(--color-three);
+    transform: scale(1.1);
+    animation: btn-animation 2000ms ease infinite;
 }
 
 header a:hover {
@@ -169,12 +203,30 @@ header a:hover {
     border: none;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     transition: all 500ms ease-out;
-
+    animation: btn-animation 2000ms ease infinite;
 }
 
 .webstudio_button:hover {
     transform: scale(1.2);
+    animation: none;
 }
+
+@keyframes btn-animation {
+    0% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.1);
+
+    }
+}
+
+
 
 .studio {
     padding-top: 94px;
@@ -410,80 +462,15 @@ header a:hover {
     letter-spacing: 0.48px;
 }
 
-.inst_box {
-    width: 44px;
-    height: 44px;
-    flex-shrink: 0;
+.portfolio_link {
+    padding: 12px;
+    border-radius: 50%;
+    fill: #AFB1B8;
 }
 
-.inst_box:hover,
-.inst:hover {
-    background-image: url(../images/svg/Ellipse.svg);
+.portfolio_link:hover {
+    background: #2196F3;
     fill: var(--color-two);
-}
-
-.inst {
-    margin-top: 10px;
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-}
-
-.twt_box {
-    width: 44px;
-    height: 44px;
-    flex-shrink: 0;
-}
-
-.twt_box:hover,
-.twt:hover {
-    background-image: url(../images/svg/Ellipse.svg);
-    fill: var(--color-two);
-}
-
-.twt {
-    margin-top: 10px;
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-}
-
-.fb_box {
-    width: 44px;
-    height: 44px;
-    flex-shrink: 0;
-}
-
-.fb_box:hover,
-.fb:hover {
-    background-image: url(../images/svg/Ellipse.svg);
-    fill: var(--color-two);
-}
-
-.fb {
-    margin-top: 10px;
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-}
-
-.in_box {
-    width: 44px;
-    height: 44px;
-    flex-shrink: 0;
-}
-
-.in_box:hover,
-.in:hover {
-    background-image: url(../images/svg/Ellipse.svg);
-    fill: var(--color-two);
-}
-
-.in {
-    margin-top: 10px;
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
 }
 
 .portfolio_svg-links {
@@ -690,12 +677,15 @@ address {
     text-transform: uppercase;
 }
 
-.contacts a {
+.contacts a,
+address {
     transition: all 250ms linear;
 }
 
-.contacts a:hover {
+.contacts a:hover,
+address:hover {
     color: #2196F3;
+    transform: translateX(5px);
 }
 
 .contacts_box-form {
@@ -725,7 +715,7 @@ address {
 }
 
 .contacts_box-form-input:focus {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 17px 2px var(--color-three);
     outline: 1px solid var(--color-three);
 }
 
@@ -750,19 +740,18 @@ address {
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0.96px;
-    width: 200px;
+    width: 193px;
     height: 50px;
     flex-shrink: 0;
     border: none;
-    background-image: url("../images/svg/icon-send.svg");
+    background-image: url(../images/svg/icon-send.svg);
     background-repeat: no-repeat;
-    background-position: 160px 10px;
+    background-position: 160px 13px;
     transition: all 300ms linear;
-
 }
-
 .contacts_box-form-btn:hover {
     box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
+    transform: scale(0.9);
 }
 
 .backdrop {
